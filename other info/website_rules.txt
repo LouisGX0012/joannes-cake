@@ -1,0 +1,8 @@
+MWebsite rules:
+A. Font-size
+    - Header: 3.5rem
+    - Content: 16px
+
+B. Spacing:
+    - Vertical contents: 50px
+    - Image and text: 

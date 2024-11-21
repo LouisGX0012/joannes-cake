@@ -1,0 +1,83 @@
+Products Info:
+A. Cake
+    1. Mocha Nougat roll cake
+        Size: 30cm
+        Price: Rp 220.000,00
+        Description: Mocha roll cake combined with mocha butter cream and sprinkled nougat made of peanuts on the outside, one of the best sellers of Joanne's Cake.
+    2. Klepon Cake
+        Diameter: 22cm
+        Price: Rp 550,000.00
+        Description: Cake inspired by the popular Indonesian market snack, klepon. A combination of pandan and coconut sponge cake, homemade klepon, and soft creamy italian merringue butter cream, which makes this cake one of our customer's favorite cake.
+    3. Banana Cake
+        Size: 10cm x 20cm
+        Price:Rp 110.000,00
+        Description: Banan sponge cake combined with chocolate chips and delicious cinnamon flavor. Made from real bananas not flavored. Fragrant and soft.
+    4. Nastar Roll Cake 
+        Size: 30cm
+        Price: Rp 260.000,00
+        Description: Roll cake with pineapple jam and sprinkled nastar crumble on the outside.
+    5. Lapis Surabaya
+        Size: 22cm x 22cm
+        Price: Rp 575.000,00
+        Description: Premium cake made with high-quality ingredient, which is the mainstay on big days with strawberry jam filing. No preservatives and drugs. 
+    6. Potato Mud Cake
+        Quantity: 10 pieces /pax
+        Price: Rp50.000,00 /pax
+        Description: This mud cake could be said to be the forerunner of Joanne's Cake. Cake that is only made from the special events at home to entertain guests, but because there's many people liked them, Pre Order system started to open. The results are selling well. Made from selected ingeredients and the best to guarantee quality and taste.
+B. Pudding
+    1. Island of Gold Pudding:
+        Diameter: 24cm
+        Price: Rp 285,000.00
+        Description: Pudding made with combination of coconut milk, brown sugar, and suji leaves. Eaten with a drizzle of coconut milk. 
+    2. Nutellario Puding
+        Diameter: 24cm
+        Price: Rp 350,000.00
+        Description: Pudding with vanilla and oreo flavours on the outer layer, with pudding and nutella vla in the inner layer. Eaten with drizzle of vanilla vla.  
+    3. Regal Capuccino Pudding
+        Diameter: 24 cm
+        Price: 325,000.00
+        Description: Pudding regal premium, a combination of chocolate-flavored at the bottom, capuccino-flavored pudding at the middle, and biscuit regal at the top layer.
+    4. Mango Pudding
+        Diameter: 24cm
+        Price: Rp 350,000.00
+        Description: Pudding with basic ingredients of fragrant mango, milk, with sprinkled fruit on top of the layer. Only available in certain seasons. 
+C. Pastry
+    1. Mini Fruit Tart
+        Quantity: 9 pcs /box
+        Price: 160.000,00 /box
+        Description: Mini fruit tart premium, accompanied with the abundant filling and fruit topping.
+    2. Fruit Tart
+        Diameter: 20cm
+        Price: Rp 285.000,00
+        Description: If you are bored with the normal birthday cake, well this fruit tart can be your choice!
+D. Cookies
+    1. Nastar Wijsman
+        Weight: 750gr 
+        Price: Rp 210.000,00
+        Description: Nastar wijsmann premium which is the mainstay of  Joanne's Cake. Melty and fragrant, with homemade pineapple jam. 
+    2. Cheese Sagoo
+        Volume: 750ml
+        Price: Rp 195.000,00
+        Description: -
+E. Bread
+    1. Milk Cheese Bread
+        Price: 30.000,00
+        Description: soft bread made with premium ingredients, wtith cheese filing and sprinkled with grated cheese.
+    2. Original Milk Bun
+        Price: Rp 75.000,00
+        Description: Joanne's Cake signature milk bun with butter filling and sprinkled with cold sugar donut and powdered milk.
+        Flavors:
+            - Original / butter
+            - Pandan
+    3. Pandan Custard Milk Bun.
+        Price: Rp 75.000,00 (assumption)
+        Description: Soft bread with homemade pandan custard filling and drizzled with coconut milk, and sprinkled with sesame seeds. 
+    4. Mountain Bread Loaf
+        Size: 20cm x 10cm
+        Price: Rp 95.000,00
+        Description: A combination of soft chiffon cake and premium bread. 
+        Flavors:
+            - Pandan Cheese
+            - Mocca Chocolate
+
+Best Seller: Nutellario Pudding, Nougat, Lapis Legit.

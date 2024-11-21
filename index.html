@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joannes Cake</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <!-- Font Awesome (icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="navbar">
+        <!-- order of each content is important (it will put the first content on the left, and 2nd content to the right, even though the CSS said otherwise) -->
+        <div class="logo">
+            <img class="logo_img" src="image/logo/logo_nobg.png"/>
+        </div>
+        <ul class="navbar_links">
+            <li><a id="visited_page" href="index.html">Home</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="shop_now.html">Shop Now!</a></li>
+            <li><a href="social.html">Social</a></li>
+            <li><a href="guest_book.html">Guest Book</a></li>
+        </ul>
+    </div>
+    <!-- Making the background color not white  -->
+    <div class="navbar_placeholder"></div>
+    <div id="content">
+        <!-- Favourite -->
+        <!-- This is kind of scuffed because there's no landscape image -->
+        <div id="favourite">
+            <header id="favourite_header">Favourites</header>
+            <div id="slide_show" onload="slideShow()">
+                <img id="favourite_image_slide_show" src="image/product/island_of_gold_pudding.jpg">
+                <!-- Space in -->
+                <a id="previous" href="javascript: goBack()"><i class="fa-solid fa-angle-left"></i></a>
+                <a id="next" href="javascript: goNext()"><i class="fa-solid fa-angle-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Our Products -->
+    <div id="product_index">
+        <header id="product_header">Our Products</header>
+        <!-- Product Sections -->
+        <div id="cake_section"><header id="cake">CAKE</header></div>
+        <div id="pudding_section"><header id="pudding">PUDDING</header></div>
+        <div id="pastry_section"><header id="pastry">PASTRY</header></div>
+        <div id="cookie_section"><header id="cookie">COOKIE</header></div>
+        <div id="bread_section"><header id="bread">BREAD</header></div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer_left">
+            <ul class="left_section">
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="social.html">Social</a></li>
+            </ul>
+        </div>
+        <div class="footer_middle">
+            <ul class="middle_section">
+                <li><a href="shop_now.html">Shop Now!</a></li>
+                <li><a href="guest_book.html">Guest Book</a></li>
+            </ul>
+        </div>
+        <div class="footer_right">
+            <ul class="social_section">
+                <li>
+                    <img class="contact_logo" src="image/logo/contact.png"></img>
+                    0815-9898-087
+                </li>
+                <li>
+                    <img class="instagram_logo" src="image/logo/instagram.png" alt="instagram logo"></img>
+                    <a class="instagram_link" href="https://www.instagram.com/joannes.cake2023/">@joannes.cake2023</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer_logo">
+            <img class="img_logo_with_bg" src="image/logo/logo.jpg" alt="joanne's cake logo with bg"></img>
+        </div> 
+    </div>
+</body>
+<style>
+    /* All */
+    *{
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0;
+    max-height: 100%;
+    max-width: 100%;
+    }
+    
+    /* headers */
+    #favourite_header, #product_header{
+        text-align: left;
+        font-size: 3.5rem;
+        font-weight: 800;
+    }
+    /* Navbar Section */
+    .navbar {
+        font-weight: 400;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* space between the text and image */
+        align-items: center;
+        background-color: #dbd0c0;
+        margin: 0;
+        position: fixed;
+        top: 0; 
+        transition: top 0.3s;
+        /* smooth animation */
+        width: 100%; 
+        z-index: 100;
+        /* ensure layer on top (priority)  */
+    }
+    .navbar_links{
+        display: flex;
+        justify-content: flex-end;
+        /* to the right (end) */
+        list-style-type: none;
+        margin-right: 20px;
+    }
+    .navbar_links a{
+        text-decoration: none;
+        color: black;
+        display: inline-block;
+        text-align: center;
+        padding: 20px 20px;
+        max-height: 70px;
+        font-size: 17px;
+        /* padding, margin, etc: top | right | bottom | left */
+    }
+    .navbar_links a#visited_page {
+        text-decoration: underline;
+        text-decoration-thickness: 3px; /* Set the thickness of the underline */
+        text-underline-offset: 10px;
+    }
+    
+    .navbar_links a:hover{
+        background-color: #B0A695;
+        transition:  ease-in 0.3s;
+        border-radius: 5px;
+    }
+    .navbar_placeholder{
+        background-color: #dbd0c0;
+        height: 70px;
+        width: 100%;
+        top: 0;
+        position: absolute;
+    }
+    .logo_img {
+        display: flex;
+        justify-content: flex-start;
+        /* to the left (start) */
+        height: 70px;
+        /* Navbar is dependent on this height */
+        margin: 0;
+        padding: 0;
+        object-fit: contain;
+        /* to ensure image's ratio */
+    }
+
+    /* Our Products Section */
+    #product_index{
+        width: 100%;    
+        display: flex;
+        flex-direction: column;
+        background-color: #F9E4C8;
+        box-sizing: border-box;
+        padding: 50px;
+    }
+    #cake, #pudding, #pastry, #cookie, #bread{
+        font-size: 80px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        padding: 20px 0px;
+    }
+    /* Favourite Section */
+    #content{
+        width: 100%;
+        display: flex;
+        margin-top: 0px;
+    }
+    #favourite {
+        padding: 120px 50px;
+        background-color: #faeee0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #slide_show{
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #favourite_image_slide_show{
+        padding: 30px 0;
+        max-width: 100%;
+        object-fit: cover;
+        width: 50%;
+        height: 600px;
+        align-items: center;
+    }
+    #previous, #next{
+        position: absolute;
+        font-size: 30px;
+    }
+    #previous{        
+        left: 20%;
+    }
+    #next{
+        right: 20%;
+    }
+    /* Fading Animation */
+    .fade {
+    animation-name: fade;
+    animation-duration: 1s;
+    }
+    @keyframes fade {
+        from { opacity: 0.5; }
+        to { opacity: 1; }
+    }
+    /* Footer */
+    .footer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #FEA198;
+        color: white;
+        width: 100%;
+    }
+    .footer li{
+        list-style-type: none;
+    }
+    .footer_left, .footer_middle, .footer_right{
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .footer_left, .footer_middle{
+        margin-left: 40px !important;
+    }
+    .footer_left li, .footer_middle li{
+        padding: 35px;
+    }
+    /* all text styles */
+    .footer_left a, .footer_middle a, .social_section li, .social_section li a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
+    /* footer social media and contacts */
+    .footer_right{
+        display: flex;
+        margin-right: 50px;
+        justify-content: flex-start;
+    }
+    .contact_logo, .instagram_logo, .img_logo_with_bg{
+        object-fit: contain;
+    }
+    .social_section{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .social_section li{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+    }
+    .contact_logo, .instagram_logo{
+        padding: 10px 20px;
+    }
+    .contact_logo, .instagram_logo{
+        height: 70px;
+    }
+    .footer_logo{
+        align-items: right;
+        margin: 0 20px 0 auto;
+        align-self: flex-end;
+        padding: 20px 0;
+    }
+    .img_logo_with_bg{
+        height: 200px;
+    }
+</style>
+<script>
+    // hide navbar on scroll
+    // source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_hide_scroll
+    var delayTimer;
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function hideNavbar() {
+        var currentScrollPos = window.pageYOffset;
+        // scrolling up
+        if (prevScrollpos > currentScrollPos) {
+            clearTimeout(delayTimer); 
+            // clears out delay timer to reset timer (prevent multiple timeouts from overlapping)
+            delayTimer = setTimeout(function delay() {
+                document.querySelector(".navbar").style.top = "0"; }, 50);
+            // adds delay timer
+        } else {
+            // scrolling down
+            clearTimeout(delayTimer);
+            document.querySelector(".navbar").style.top = "-70px";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+    // image slideshow
+    var imgArray = new Array(5);
+    var index = 0;
+    var slideShowInterval
+    //starting point = 0
+    // idk how to make a delay timer for this slideshow (so the image won't be skipped when pressing back or next)
+    function slideShow(){
+        imgArray[0] = new Image;
+        imgArray[0].src = "image/product/island_of_gold_pudding.jpg";
+        imgArray[1] = new Image;
+        imgArray[1].src = "image/product/fruit_tart.jpg";
+        imgArray[2] = new Image;
+        imgArray[2].src = "image/product/mountain_bread_loaf_mocca_chocolate.jpg";
+        imgArray[3] = new Image;
+        imgArray[3].src = "image/product/banana_cake.jpg";
+        imgArray[4] = new Image;
+        imgArray[4].src = "image/product/milk_bun_pandan_custard.jpg";
+        startSlideShow();
+    }
+    function startSlideShow(){
+        slideShowInterval = setInterval(selectImage, 3000);
+        // interval = constant break of timer
+    }
+    function resetSlideShowInterval(){
+        clearInterval(slideShowInterval); 
+        // add delay timer so the image won't be skipped when pressing goNext or goBack function (by the setInterval)
+        startSlideShow();
+        // starts the slideshow again
+    }
+    function selectImage(){ 
+        // making image to change in ascending order of index
+            if (index < imgArray.length - 1){
+                index ++;
+            } else{
+                index = 0;
+            }
+            fadeAnimation();
+        }   
+    window.onload = slideShow;
+    function fadeAnimation(){
+        const imageElement = document.getElementById("favourite_image_slide_show")
+        imageElement.classList.add("fade");
+        // adding fade class to image element
+        imageElement.src = imgArray[index].src;
+        setTimeout(() => {
+            imageElement.classList.remove("fade");
+        }, 1000); // stop fade animation after 1s
+    }
+    function goBack(){
+        if(index > 0){
+            index --;
+            // decrement (decrease) the index var
+        }else{
+            index = imgArray.length-1;
+            // reset the index to the last image in the array (looping)
+        }
+        fadeAnimation();
+        resetSlideShowInterval();
+    }
+    function goNext(){
+        if(index < imgArray.length - 1){
+            index ++;
+            // increment the index var
+        }else{
+            index = 0
+            // reset the index to the first image in the array (looping)
+        }
+        fadeAnimation();
+        resetSlideShowInterval();
+    }
+</script>
+</html>
