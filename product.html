@@ -66,7 +66,77 @@
                 <div class="modal" id="modal_c1">
                     <div class="modal_content">
                         <div class="modal_header">
-                            <span class="close"><i class="fa-solid fa-xmark"></i></span>
+                            <span class="close_modal"><i class="fa-solid fa-xmark"></i></span>
+                            <header class="modal_header_text" id="modal_header_text_c1">Klepon Cake</header>
+                        </div>
+                        <div class="modal_body">
+                            <img src="/image/product/klepon_cake.jpg" alt="Klepon Cake"></img>
+                            <span>
+                                <ul>
+                                    <li>
+                                        <header class="header_text">Description:</header>
+                                        <span class="description_text">Cake inspired by the popular Indonesian market snack, klepon. A combination of pandan and coconut sponge cake, homemade klepon, and soft creamy italian merringue butter cream, which makes this cake one of our customer's favorite cake.</span></li>
+                                    <li>
+                                        <header class="header_text">Diameter:</header> 
+                                        <span class="description_text">22cm</span></li>
+                                    <li>
+                                        <header class="header_text" id="price_c1">Price:</header>
+                                        <span class="description_text">Rp 550,000.00</span>
+                                    </li>
+                                </ul>
+                            </span>
+                        </div>
+                        <div class="modal_footer">
+                            <span class="modal_footer_text">Joanne's Cake | @2024</span>
+                            <span class="contacts_modal_footer">
+                                <span>0815-9898-087</span>
+                                <img src="image/logo/contact.png" alt="contact_logo" class="contact_logo_modal_footer"></img>
+                                <span>@joannes.cake2023</span>
+                                <img src="image/logo/instagram.png" alt="instagram_logo" class="instagram_logo_modal_footer">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <div class="modal" id="modal_c1">
+                    <div class="modal_content">
+                        <div class="modal_header">
+                            <span class="close_modal"><i class="fa-solid fa-xmark"></i></span>
+                            <header class="modal_header_text" id="modal_header_text_c1">Klepon Cake</header>
+                        </div>
+                        <div class="modal_body">
+                            <img src="/image/product/klepon_cake.jpg" alt="Klepon Cake"></img>
+                            <span>
+                                <ul>
+                                    <li>
+                                        <header class="header_text">Description:</header>
+                                        <span class="description_text">Cake inspired by the popular Indonesian market snack, klepon. A combination of pandan and coconut sponge cake, homemade klepon, and soft creamy italian merringue butter cream, which makes this cake one of our customer's favorite cake.</span></li>
+                                    <li>
+                                        <header class="header_text">Diameter:</header> 
+                                        <span class="description_text">22cm</span></li>
+                                    <li>
+                                        <header class="header_text" id="price_c1">Price:</header>
+                                        <span class="description_text">Rp 550,000.00</span>
+                                    </li>
+                                </ul>
+                            </span>
+                        </div>
+                        <div class="modal_footer">
+                            <span class="modal_footer_text">Joanne's Cake | @2024</span>
+                            <span class="contacts_modal_footer">
+                                0815-9898-087<img src="image/logo/contact.png" alt="contact_logo" class="contact_logo_modal_footer"></img>
+                                @joannes.cake2023<img src="image/logo/instagram.png" alt="instagram_logo" class="instagram_logo_modal_footer">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                            <div class="modal" id="modal_c1">
+                    <div class="modal_content">
+                        <div class="modal_header">
+                            <span class="close_modal"><i class="fa-solid fa-xmark"></i></span>
                             <header class="modal_header_text" id="modal_header_text_c1">Klepon Cake</header>
                         </div>
                         <div class="modal_body">
@@ -99,13 +169,13 @@
 
             <!-- layout planning: large image left and the right is the info text -->
             <!-- simple modal layout:
-            <button class="btn_modal">
+            <butto class="btn_modal">
                 <img id="" src="" alt=""></img>
                 <span></span>
-            </button>
+            </butto
             <div class="modal_content">
                 <div class="modal_header">
-                    <span class="close"></span>
+                    <span class="close_modal"></span>
                     <header class="modal_header_text"></header>
                 </div>
                 <div class="modal_body">
@@ -316,13 +386,12 @@
         /* stay hidden */
         position: fixed;
         z-index: 1000; 
-        padding-top: 100px;
+        padding-top: 50px;
         /* location of modal */
         left: 0;
         top: 0;
         width: 100%; 
         height: 100%;
-        overflow: auto; 
         background-color: rgba(0,0,0,0.4); 
         /* last number is opacity */
     }
@@ -332,14 +401,14 @@
         margin: auto;
         width: 75%;
         height: 100%;
+        max-height: calc(100% - 100px);
+        /* ensure that the content doesn't get cut off screen */
+        overflow: auto;
         box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
-    .modal_body header{
-
-    }
-
-    .close{
+    .close_modal{
         right: 0;
         display: flex;
         justify-content: flex-end;
@@ -347,10 +416,23 @@
         font-size: 2em;
     }
 
+    .modal_header, .modal_body, .modal_footer{
+        padding: 25px;
+    }
+
     .modal_header{
         background-color: #FFD09B;
         display: flex;
         flex-direction: column;
+    }
+
+    .modal_header_text{
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+    
+    .close_modal{
+        font-size: 1.5em;
     }
     
 
@@ -358,29 +440,49 @@
         background-color: #FFECC8;
         display: flex;
         flex-direction: row;
+        align-items: center;
+        box-sizing: border-box;
     }
     
     .modal_body img{
         object-fit: cover;
-        width: 20em;
-        height: 25em;
+        width: 35em;
+        height: 35em;
     }
 
-    .modal_footer{
-        
+    .modal_body li{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 3em;
     }
 
     .header_text{
-
+        font-weight: bold;
     }
 
-    .description_text{
-
+    .description_text, .header_text{
+        font-size: 1.2em;
     }
 
-    .modal_footer_text{
+    .modal_footer{
+        display: flex;
+        flex-direction: row;
+        background-color: #FEA198;
+        justify-content: space-between;
+    }
 
-    }    
+    .contacts_modal_footer{
+        display: flex;
+    }
+
+    .contact_logo_modal_footer, .instagram_logo_modal_footer{
+        object-fit: cover;
+        height: 2em;
+    }
+
+    .contact_logo_modal_footer{
+        padding-right: 20px;
+    }
 
     /* Modal animation */
     @keyframes modalOpen{
@@ -388,6 +490,29 @@
             transform: scale(0.8);
             opacity: 0;
         }
+        to{
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes modalClose{
+        from{
+            transform: scale(1);
+            opacity: 1;
+        }
+        to{
+            transform: scale(0.8);
+            opacity: 0;
+        }
+    }
+
+    .show{
+        animation: modalOpen 0.3s forwards;
+    }
+
+    .hide{
+        animation: modalClose 0.3s forwards;
     }
 
     /* Footer */
@@ -402,62 +527,76 @@
         color: white;
         width: 100%;
     }
+
     .footer li{
         list-style-type: none;
     }
+
     .footer_left, .footer_middle, .footer_right{
         flex: 1;
         display: flex;
         flex-direction: row;
         align-items: center;
     }
+
     .footer_left, .footer_middle{
         margin-left: 40px !important;
     }
+
     .footer_left li, .footer_middle li{
         padding: 35px;
     }
+
     /* all text styles */
     .footer_left a, .footer_middle a, .social_section li, .social_section li a{
         text-decoration: none;
         color: white;
         font-size: 20px;
     }
+
     /* footer social media and contacts */
     .footer_right{
         display: flex;
         margin-right: 50px;
         justify-content: flex-start;
     }
+
     .contact_logo_web_footer, .instagram_logo_web_footer, .img_logo_with_bg{
         object-fit: contain;
     }
+
     .social_section{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
+
     .social_section li{
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         gap: 10px;
     }
+
     .contact_logo_web_footer, .instagram_logo_web_footer{
         padding: 10px 20px;
     }
+
     .contact_logo_web_footer, .instagram_logo_web_footer{
         height: 70px;
     }
+
     .footer_logo{
         align-items: right;
         margin: 0 20px 0 auto;
         align-self: flex-end;
         padding: 20px 0;
     }
+
     .img_logo_with_bg{
         height: 200px;
     }
+
 </style>
 <script>
 
@@ -490,36 +629,61 @@
         prevScrollpos = currentScrollPos;
     }
 
-    // modal
-    // lines can be reduced using querySelectorAll (one function for mutliple classes or by using jQuery) method, but I don't know how to do it yet.
+    // modal boxes learning source: https://www.w3schools.com/howto/howto_css_modals.asp
+    // how to select all functions learning sources:
+    // - https://stackoverflow.com/questions/55315323/how-to-select-all-elements-with-a-class-in-js
+    // - https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_document_queryselectorall_loop
 
-    var modal = document.querySelector(".modal");
-    var btn = document.querySelector(".btn_modal");
-    var close_span = document.querySelector(".close");
-    
-    // open modal
-    btn.onclick = function btnModal(){
-        modal.style.display = "block";
+    // modal boxes
+
+    // Select all modals, buttons, and close buttons
+    const modal = document.querySelectorAll(".modal");
+    const btn = document.querySelectorAll(".btn_modal");
+    const close = document.querySelectorAll(".close_modal"); 
+
+    for (let i = 0; i < modal.length; i++){
+        btn[i].onclick = function openModal(){
+            modal[i].classList.add("show");
+            // add show transition
+            modal[i].classList.remove("hide");
+            // remove hide transition
+            modal[i].style.display = "block";
+        };
     }
 
-    // closing modal
-    close_span.onclick = function closeModal(){
-        modal.style.display = "none";
+    for (let i = 0; i < modal.length; i++){
+        close[i].onclick = function closeModal(){
+            modal[i].classList.remove("show");
+            modal[i].classList.add("hide");
+            setTimeout(function(){
+                modal[i].style.display = "none";
+            }, 300);
+        };
     }
 
-    // close modal on outside area
-    window.onclick = function closeModalOutside(event){
-        if (event.target == modal){
-            modal.style.display = "none";
-        }
+    for (let i = 0; i < modal.length; i++){
+        window.onclick = function(event){
+            if(event.target === modal[i]){
+                modal[i].classList.add("hide");
+                modal[i].classList.remove("show");
+                setTimeout(function(){
+                    modal[i].style.display = "none";
+                }, 300);
+            }
+        };
     }
 
-    // closing modal on pressing esc key
-    document.addEventListener("keydown", function closeModalOutside(event){
-        if(event.key == "Escape"){
-            modal.style.display = "none";
-        }
-    })
+    for (let i = 0; i < modal.length; i++){
+        document.addEventListener("keydown", function(event){
+            if(event.key === "Escape"){
+                modal[i].classList.add("hide");
+                modal[i].classList.remove("show");
+                setTimeout(function(){
+                    modal[i].style.display = "none";
+                }, 300);
+            }
+        });
+    }
 
 </script>
 </html>
